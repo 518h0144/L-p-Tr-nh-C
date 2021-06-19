@@ -1,13 +1,20 @@
-#include <stdio.h>
+/*
+    cau 1
+*/
 
-int main()
-{
-    int a,b,c;
-    float tb=0;
-    printf("Nhap A, B, C :");
-    scanf("%d%d%d",&a ,&b ,&c);
-    tb=(a + b +c)/(double)3;
-    printf("TBC cua 3 so la %.2f",tb);
+#include<stdio.h>
 
-    return 0;
+void doubleANum(int *n);
+
+int main(){
+    int n ;
+    printf("Enter N: ");
+    scanf("%d",&n);
+    printf("N =%d",n);
+    doubleANum(&n);
+    printf("\nDouble a N =%d",n);
+}
+
+void doubleANum(int *n){
+    *n = (*n) * 2;
 }
